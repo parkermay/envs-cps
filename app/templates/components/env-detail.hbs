@@ -12,6 +12,21 @@
 	  			</div>
 	  			{{/if}}
 			{{/each}}
+			{{#if hasStoreOverrides}}
+				Store Overrides
+	  			{{#each env.pmsenvs as |pms|}}
+	  				{{#if pms.storeOverrides}}
+		  			<div>
+		  				<span class="pms-name">{{pms.displayName}}</span>
+		  				<span class="pms-detail"> - {{pms.version}}</span>
+		  				<span class="pms-detail"> - {{pms.envName}}</span>
+		  			</div>
+		  			{{#each pms.storeOverrides as |overrides|}}
+		  				<span class="pms-detail">{{overrides.facilityId}}</span>
+					{{/each}}
+		  			{{/if}}
+				{{/each}}
+  			{{/if}}
   		</div>
   		<div class="col-sm-4">
 		  	<div class="env-detail-name">

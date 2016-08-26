@@ -22,6 +22,7 @@ let envsModel = [{
 		isCorpRoot: false,
 		storeOverrides: [
 				{ "facilityId": "07500" },
+				{ "facilityId": "1130" },
 			]
 		}
 	],
