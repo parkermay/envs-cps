@@ -1,0 +1,28 @@
+$offscreen-menu-width: 300px
+
+.pushy
+    background: $primary-darkest-color
+    width: $offscreen-menu-width
+
+.pushy a
+    padding: 10px 10px
+    border: none
+    color: $secondary-light-color
+    &:hover
+        background: $secondary-light-color
+        color: $primary-darkest-color
+        text-decoration: none
+
+.pushy ul
+    padding: 0
+
+.pushy-left
+    -webkit-transform: translate3d(-$offscreen-menu-width, 0, 0)
+    -ms-transform: translate3d(-$offscreen-menu-width, 0, 0)
+    transform: translate3d(-$offscreen-menu-width, 0, 0)
+
+.pushy-open-left #container,
+.pushy-open-left .push
+    -webkit-transform: translate3d($offscreen-menu-width, 0, 0)
+    -ms-transform: translate3d($offscreen-menu-width, 0, 0)
+    transform: translate3d($offscreen-menu-width, 0, 0)
