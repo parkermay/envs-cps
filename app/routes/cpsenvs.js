@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 let envsModel = [{
+	showStoreOverrides: false,
 	name: 'QA NG',
 	version: '1.4.0-1234',
 	pmsenvs: [{
@@ -43,9 +44,8 @@ export default Ember.Route.extend({
 	},
 
     actions: {
-        selectionChanged(boxId, isChecked) {
-            console.log('cpsenvs: selectionChanged invoked');
-            console.log(`  boxId = ${boxId}, isChecked = ${isChecked}`);
+        settingChanged(settingName, settingValue) {
+            console.log(`cpsenvs: settingChanged invoked:  boxId = ${settingName}, isChecked = ${settingValue}`);
         }
     }
 });

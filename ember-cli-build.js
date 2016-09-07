@@ -9,6 +9,7 @@ module.exports = function(defaults) {
     }
   });
 
+  app.import(app.bowerDirectory + "/js-cookie/src/js.cookie.js");
   app.import(app.bowerDirectory + "/bootstrap-sass/assets/javascripts/bootstrap.js");
 
   // Use `app.import` to add additional libraries to the generated
