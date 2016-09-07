@@ -1,7 +1,7 @@
 <ul>
-    <li>{{menu-checkbox labelValue="Dev Environments" boxId="showDev"}}</li>
-    <li>{{menu-checkbox labelValue="Non Prod Environments" boxId="showNonProd"}}</li>
-    <li>{{menu-checkbox labelValue="Production Environments" boxId="showProd"}}</li>
+    <li>{{menu-checkbox labelValue="Dev Environments" boxId="showDev" onStateChange=(action onOptionChanged)}}</li>
+    <li>{{menu-checkbox labelValue="Non Prod Environments" boxId="showNonProd" onStateChange=(action "checkboxChecked")}}</li>
+    <li>{{menu-checkbox labelValue="Production Environments" boxId="showProd" onStateChange=(action "checkboxChecked")}}</li>
     <li role="separator" class="divider"></li>
-    <li>{{menu-checkbox labelValue="Show Store Level" boxId="showStoreLevel"}}</li>
+    <li>{{menu-checkbox labelValue="Show Store Level" boxId="showStoreLevel" onStateChange=(action "checkboxChecked")}}</li>
 </ul>

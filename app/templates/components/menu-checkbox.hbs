@@ -1,4 +1,13 @@
 <div>
+{{!-- 
+    Setting an action here overrides the click event to some degree.
+    We still get the click function invoked, but the flyout no longer closes and the checkbox does not show as checked.
+ --}}
+{{!-- 
+    <input class="menu-checkbox-input" type="checkbox" id={{boxId}} name={{boxId}} value={{boxId}} {{action "changeCheckState"}}>
+ --}}
     <input class="menu-checkbox-input" type="checkbox" id={{boxId}} name={{boxId}} value={{boxId}}>
+
+
     <label class="menu-checkbox-label" for={{boxId}}>{{labelValue}}</label>
 </div>
