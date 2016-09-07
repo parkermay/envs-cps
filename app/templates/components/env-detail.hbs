@@ -12,6 +12,7 @@
 	  			</div>
 	  			{{/if}}
 			{{/each}}
+            {{#if showStoreOverrides}}
 			{{#if hasStoreOverrides}}
 				Store Overrides
 	  			{{#each env.pmsenvs as |pms|}}
@@ -26,7 +27,8 @@
 					{{/each}}
 		  			{{/if}}
 				{{/each}}
-  			{{/if}}
+            {{/if}}
+            {{/if}}
   		</div>
   		<div class="col-sm-4">
 		  	<div class="env-detail-name">

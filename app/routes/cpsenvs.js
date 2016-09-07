@@ -1,7 +1,9 @@
 import Ember from 'ember';
 
-let envsModel = [{
+let envsModel = {
 	showStoreOverrides: false,
+	envs: 
+[{
 	name: 'QA NG',
 	version: '1.4.0-1234',
 	pmsenvs: [{
@@ -36,7 +38,8 @@ let envsModel = [{
 }, {
 	name: 'SB GA',
 	version: '1.4.0-1234',
-}];
+}]
+};
 
 export default Ember.Route.extend({
 	model() {
@@ -46,6 +49,19 @@ export default Ember.Route.extend({
     actions: {
         settingChanged(settingName, settingValue) {
             console.log(`cpsenvs: settingChanged invoked:  boxId = ${settingName}, isChecked = ${settingValue}`);
+            //Cookies.set(settingName, settingValue);
+
+			const model = this.model();
+			console.log('model = ' + model);
+			Ember.set(model, 'showStoreOverrides', settingValue);
+
+		// apiTaskq.getTasks(
+		// 		Cookies.get('cps-store-id'),
+		// 		Cookies.get('cps-taskq-sort'),
+		// 		searchType, searchTerm
+		// 	).then(taskData => {
+		// 		Ember.set(taskqModel, 'tasks', taskData.tasks);
+
         }
     }
 });

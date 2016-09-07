@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 	env: null,
-	showStoreOverrides: false,
+//	showStoreOverrides: false,
 	hasStoreOverrides: Ember.computed('env', function() {
 		let override = false;
 		const thisEnv = this.get('env');
