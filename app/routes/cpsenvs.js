@@ -40,5 +40,12 @@ let envsModel = [{
 export default Ember.Route.extend({
 	model() {
 		return envsModel;
-	}
+	},
+
+    actions: {
+        selectionChanged(boxId, isChecked) {
+            console.log('cpsenvs: selectionChanged invoked');
+            console.log(`  boxId = ${boxId}, isChecked = ${isChecked}`);
+        }
+    }
 });
