@@ -5,11 +5,13 @@
   		<div class="col-sm-5">
   			{{#each env.pmsenvs as |pms|}}
   				{{#if pms.isCorpRoot}}
-	  			<div>
+                    {{pms-detail pms=pms}}
+{{!-- 	  			<div>
 	  				<span class="pms-name">{{pms.displayName}}</span>
 	  				<span class="pms-detail"> - {{pms.version}}</span>
 	  				<span class="pms-detail"> - {{pms.envName}}</span>
 	  			</div>
+ --}}                
 	  			{{/if}}
 			{{/each}}
             {{#if showStoreOverrides}}

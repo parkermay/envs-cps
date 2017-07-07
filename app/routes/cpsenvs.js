@@ -19,10 +19,19 @@ let envsModel = {
 		isCorpRoot: true,
 		storeOverrides: []
 		}, {
-		envName: 'txndcq3',
+		envName: 'txndcq30',
 		displayName: 'QA30',
 		version: '6.1.0.1',
 		isCorpRoot: false,
+		storeOverrides: [
+				{ "facilityId": "07500" },
+				{ "facilityId": "1130" },
+			]
+		}, {
+		envName: 'txndcq31',
+		displayName: 'QA31',
+		version: '6.1.0.1',
+		isCorpRoot: true,
 		storeOverrides: [
 				{ "facilityId": "07500" },
 				{ "facilityId": "1130" },
